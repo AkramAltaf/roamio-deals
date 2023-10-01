@@ -1,0 +1,19 @@
+{
+  "name": "roamio-deals",
+  "version": "1.0.0",
+  "description": "Hotel booking app built with MERN stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkramAltaf/roamio-deals.git"
+  },
+  "author": "Tarique Masood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AkramAltaf/roamio-deals/issues"
+  },
+  "homepage": "https://github.com/AkramAltaf/roamio-deals#readme"
+}
