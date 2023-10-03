@@ -3,34 +3,12 @@ import { css } from "@emotion/react";
 import theme from "../styles/theme";
 import star from "../images/star-dark.svg";
 import location from "../images/location.svg";
-import { useParams } from "react-router";
 import HotelDetails from "../components/hotel-details";
 import Review from "../components/review";
 import HotelServices from "../components/hotel-services";
 import Sidebar from "../components/sidebar";
-import { useDispatch, useSelector } from "react-redux";
-import { STATUSES, fetchProductDetails } from "../store/productSlice";
-import { useEffect } from "react";
 
-const OrderDetails = () => {
-  const dispatch = useDispatch();
-  const { productId } = useParams();
-  const { data: products, status } = useSelector((state) => state.product);
-  const product = products && products.find((p) => p._id === productId);
-
-  useEffect(() => {
-    dispatch(fetchProductDetails(productId));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [productId]);
-
-  if (status === STATUSES.LOADING) {
-    return <h2 style={{ textAlign: "center" }}>Loading...</h2>;
-  }
-
-  if (status === STATUSES.ERROR) {
-    return <h2 style={{ textAlign: "center" }}>Something went wrong</h2>;
-  }
-
+const OrderDetails = ({ product }) => {
   return (
     <section css={sectionCss}>
       <div className="container">

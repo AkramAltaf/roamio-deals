@@ -1,16 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import React from "react";
 import Button from "./button";
-import { useDispatch } from "react-redux";
-import { add } from "../store/cartSlice";
 import ItemCard from "./item-card";
 
 const Sidebar = (props) => {
-  const dispatch = useDispatch();
-
   const handleAdd = () => {
-    dispatch(add(props.product));
+    console.log("Add");
   };
 
   return (

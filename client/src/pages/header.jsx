@@ -17,13 +17,10 @@ import Login from "./login";
 import Button from "../components/button";
 import SignUp from "./signup";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import Badge from "../components/badge";
 
 const HeaderDesktop = () => {
   const [isLoginModal, setIsLoginModal] = useState(false);
   const [isSignupModal, setIsSignupModal] = useState(false);
-  const items = useSelector((state) => state.cart);
 
   return (
     <section css={hContainerCss}>
@@ -66,7 +63,6 @@ const HeaderDesktop = () => {
                 <div css={actionCss}>
                   <img src={cart} alt="img" />
                   <span css={actionTextCss}>Cart</span>
-                  {items.length > 0 && <Badge content={items.length} />}
                 </div>
               </Link>
             </div>
