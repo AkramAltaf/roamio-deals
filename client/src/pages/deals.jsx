@@ -4,9 +4,20 @@ import ExternalLink from "../components/external-link";
 import theme from "../styles/theme";
 import { mq } from "../styles/breakpoints";
 import Card from "../components/card";
-import { products } from "../data/products";
+import { useEffect, useState } from "react";
 
 const Deals = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const data = await fetch("/api/products").then((res) => res.json());
+      setProducts(data);
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
     <section className="ptb">
       <div className="container">

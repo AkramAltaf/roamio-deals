@@ -3,17 +3,16 @@ import { css } from "@emotion/react";
 import Counter from "./counter";
 
 const ItemCard = (props) => {
-
   return (
-      <div css={ItemCardCss}>
-        <div css={ItemCardTitle}>{props.product.title}</div>
-        <div css={titleCss}>
-          <span css={offerCss}>298</span>
-          <span css={priceCss}>{props.product.price}</span>
-          <span css={currencyCss}>{props.product.currency}</span>
-        </div>
-        <Counter />
+    <div css={ItemCardCss}>
+      <div css={ItemCardTitle}>{props.product.name}</div>
+      <div css={titleCss}>
+        <span css={offerCss}>298</span>
+        <span css={priceCss}>{props.product.price}</span>
+        <span css={currencyCss}>{props.product.currency}</span>
       </div>
+      <Counter />
+    </div>
   );
 };
 

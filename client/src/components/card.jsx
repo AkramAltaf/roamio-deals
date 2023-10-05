@@ -5,48 +5,35 @@ import { Link } from "react-router-dom";
 import heartIcon from "../images/heart-icon.svg";
 import locationIcon from "../images/location.svg";
 import starIcon from "../images/star.svg";
+import RatingLabel from "./rating-label";
 
 const Card = (props) => {
-  const {
-    _id,
-    cardImg,
-    title,
-    location,
-    rating,
-    reviewCount,
-    review,
-    price,
-    currency,
-    offer,
-  } = props;
+  const { _id, image, name, city, rating, numberOfReviews, price, offer } =
+    props;
 
   return (
     <div css={cardCss}>
       <Link to={`/deals/${_id}`}>
         <div css={cardImageWrapCss}>
-          <img
-            src={`${process.env.PUBLIC_URL + cardImg}`}
-            alt="img"
-            css={cardImageCss}
-          />
+          <img src={image} alt="img" css={cardImageCss} />
           <img src={heartIcon} alt="img" css={heartIconCss} />
         </div>
         <div css={descriptionCss}>
-          <div css={titleCss}>{title}</div>
+          <div css={titleCss}>{name}</div>
           <div css={locationCss}>
-            <img src={locationIcon} alt="img" /> <span>{location}</span>
+            <img src={locationIcon} alt="img" /> <span>{city}</span>
           </div>
           <div css={ratingCss}>
             <div css={starCss}>
               <span css={starRatingCss}>{rating}</span>
               <img css={ratingIconCss} src={starIcon} alt="img" />
             </div>
-            <span css={reviewCountCss}>{reviewCount}</span>
-            <span css={reviewCss}>{review}</span>
+            <span css={reviewCountCss}>{numberOfReviews}</span>
+            <RatingLabel value={rating} />
           </div>
           <div css={priceContainerCss}>
             <span css={priceCss}>{price}</span>
-            <span css={currencyCss}>{currency}</span>
+            <span css={currencyCss}>AED</span>
             <span css={offerCss}>{offer}% OFF</span>
           </div>
         </div>
@@ -122,10 +109,6 @@ const ratingIconCss = css``;
 
 const reviewCountCss = css`
   color: #83878a;
-`;
-
-const reviewCss = css`
-  color: #4a4a4a;
 `;
 
 const priceContainerCss = css`

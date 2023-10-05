@@ -67,6 +67,7 @@ const modalImgCss = css`
   padding: ${50 / 16}em;
   max-width: ${353 / 16}em;
   width: 100%;
+  margin: 0 auto;
 `;
 
 const loginTitleCss = css`

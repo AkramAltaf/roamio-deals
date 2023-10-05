@@ -1,38 +1,41 @@
 export const products = [
     {
       _id: "1",
-      title: "Burj Khalifa Observation Deck",
-      cardImg: "images/burj-khalifa.svg",
-      location: "Dubai",
-      rating: "4.3",
-      reviewCount: "(13)",
-      review: "Excellent",
-      price: "1,800",
-      currency: "AED",
-      offer: 23
+      name: "Burj Khalifa Observation Deck",
+      description: "Description of the hotel",
+      image: "images/burj-khalifa.svg",
+      city: "Dubai",
+      rating: 3.6,
+      numberOfReviews: 13,
+      price: 1800,
+      offer: 23,
+      category: "hotel",
+      isAvailable: true
     },
     {
       _id: "2",
-      cardImg: "images/cruise.svg",
-      title: "Cruise",
-      location: "Sharjah",
-      rating: "3.8",
-      reviewCount: "(8)",
-      review: "Excellent",
-      price: "1,400",
-      currency: "AED",
-      offer: 23
+      name: "Cruise",
+      description: "Description of the hotel",
+      image: "images/cruise.svg",
+      city: "Sharjah",
+      rating: 4.6,
+      numberOfReviews: 7,
+      price: 1200,
+      offer: 23,
+      category: "hotel",
+      isAvailable: true
     },
     {
       _id: "3",
-      cardImg: "images/safari.svg",
-      title: "Safari",
-      location: "Al Ain",
-      rating: "4.0",
-      reviewCount: "(18)",
-      review: "Excellent",
-      price: "1,100",
-      currency: "AED",
-      offer: 23
+      name: "Safari",
+      description: "Description of the hotel",
+      image: "images/safari.svg",
+      city: "Al Ain",
+      rating: 4.0,
+      numberOfReviews: 24,
+      price: 800,
+      offer: 23,
+      category: "hotel",
+      isAvailable: true
     }
   ]
